@@ -20,13 +20,10 @@ profile:
       value: "Postdoctoral Researcher, since 2025"
     - label: "Degree"
       value: "Ph.D. (Dr. rer. nat.), RWTH Aachen"
-    - label: "Location"
-      value: "Aachen, Germany"
     - label: "Languages"
-      value: "Persian (native) · English (C1) · German (B1)"
-  keywords: ["Hybrid modeling", "Neurosymbolic AI", "Interpretability", "Uncertainty quantification", "Clinical prediction", "ICU", "Digital twins", "Kolmogorov–Arnold networks", "Swarm learning", "Glucose–insulin modeling"]
+      value: "Persian (native) · English (C1) · German (B2)"
+  keywords: ["Hybrid modeling", "Interpretability", "Uncertainty quantification", "Clinical prediction", "ICU", "Digital twins", "Kolmogorov–Arnold networks", "Swarm learning", "Glucose–insulin modeling", "Neurosymbolic AI"]
   email: "moein.samadi@rwth-aachen.de"
-  location: "Aachen, Germany"
   profileImage: "/images/profile.jpg"
 
   links:
@@ -68,7 +65,7 @@ profile:
 
   # HTML is allowed here (<br/>, <a>, <strong>, ...)
   biography: |
-    Hi! I'm <strong>Moein</strong>, a postdoctoral researcher at the <em>Institute for Computational Biomedicine</em> (University Hospital RWTH Aachen), working with Prof. Andreas Schuppert.
+    I'm a postdoctoral researcher at the <em>Institute for Computational Biomedicine</em> (University Hospital RWTH Aachen), working with Prof. Andreas Schuppert.
     My research is on <strong>hybrid modeling</strong>: the principled integration of mechanistic and data-driven methods to make machine learning in healthcare more reliable, interpretable and clinically trustworthy.
     I work on ICU mortality prediction across multiple hospitals, non-invasive ventilation outcome prediction, and glucose–insulin dynamics in diabetes, combining methodological contributions with validated clinical applications.
     <div class="my-2"></div>
@@ -92,15 +89,12 @@ contact:
 education:
   - degree: "Ph.D. in Computational Engineering Sciences"
     school: "RWTH Aachen University"
-    years: "2019 – 2025"
 
   - degree: "M.Sc. in Condensed Matter Physics"
     school: "Sharif University of Technology"
-    years: "2016 – 2018"
 
   - degree: "B.Sc. in Physics"
     school: "Sharif University of Technology"
-    years: "2010 – 2015"
 
 # =====================================================
 # Research positions
@@ -225,7 +219,7 @@ services:
 
   - category: "Teaching"
     role: "Teaching Assistant: MATLAB and Systems Biology"
-    organization: "RWTH Aachen University (Prof. Andreas Schuppert)"
+    organization: "RWTH Aachen University"
     date: "2021 – 2024"
     link: null
     image: null
@@ -362,5 +356,5 @@ skills:
       description: null
     - name: "German"
       logo: null
-      proficiency: "B1 – intermediate"
+      proficiency: "B2 – upper-intermediate"
       description: null
