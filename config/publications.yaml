@@ -11,12 +11,28 @@ publications:
   authorName: "Moein E. Samadi"
 
   items:
+    - id: network-reconstruction-2026
+      title: "Reconstruction of the functional signaling network of hepatocytes from combinatorial stimulation and inhibition of phosphorylation"
+      authors: "Moein E. Samadi, Andreas Schuppert"
+      year: 2026
+      venue: "Frontiers in Systems Biology 6: 1975004"
+      link: "https://www.frontiersin.org/journals/systems-biology/articles/10.3389/fsysb.2026.1975004/abstract"
+      featured: true
+      
+    - id: Insulin-Dose-Response-2026
+      title: "Insulin Dose–Response Alignment for Glucose Forecasting in Type 1 Diabetes"
+      authors: "Jonas Wolber, Moein E. Samadi, Julia Sellin, Martin Mücke, Andreas Schuppert"
+      year: 2026
+      venue: "SSRN 7625169"
+      link: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7625169"
+      featured: true
+      
     - id: neurosymbolic-pmlr-2026
       title: "From Hybrid Mechanistic–Data-Driven Modeling to Neurosymbolic AI: What, Why, and How?"
       authors: "Moein E. Samadi, Andreas Schuppert"
       year: 2026
-      venue: "Submitted to Proceedings of Machine Learning Research 284:1–19 (20th Conference on Neurosymbolic Learning and Reasoning)"
-      link: null
+      venue: "Proceedings of Machine Learning Research 284:1–19 (20th Conference on Neurosymbolic Learning and Reasoning)"
+      link: "https://2026.nesyconf.org/program/"
       featured: true
 
     - id: nivpredict-critical-care-2026
