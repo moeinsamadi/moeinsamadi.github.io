@@ -6,6 +6,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { education } from "@/data/education";
 import { workExperience } from "@/data/workExperience";
 
+// `years` (and `logo`) may be left out of config/profile.yaml
+type Entry = { years?: string | null };
+
 export default function ExperienceSection() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -27,9 +30,11 @@ export default function ExperienceSection() {
                 />
                 <div>
                   <div className="font-semibold">{edu.school}</div>
-                  <div className="text-sm text-muted-foreground">
-                    {edu.years}
-                  </div>
+                  {(edu as Entry).years && (
+                    <div className="text-sm text-muted-foreground">
+                      {(edu as Entry).years}
+                    </div>
+                  )}
                   <div className="text-sm">{edu.degree}</div>
                 </div>
               </div>
@@ -56,9 +61,11 @@ export default function ExperienceSection() {
                 />
                 <div>
                   <div className="font-semibold">{job.company}</div>
-                  <div className="text-sm text-muted-foreground">
-                    {job.years}
-                  </div>
+                  {(job as Entry).years && (
+                    <div className="text-sm text-muted-foreground">
+                      {(job as Entry).years}
+                    </div>
+                  )}
                   <div className="text-sm">{job.title}</div>
                 </div>
               </div>
