@@ -7,11 +7,11 @@
 
 profile:
   name: "Moein Samadi"
-  headline: "Postdoctoral Researcher at Institute for Computational Biomedicine, RWTH Aachen"
+  headline: "Postdoctoral Researcher @ Institute for Computational Biomedicine, RWTH Aachen"
 
   # ---- Top of the home page (hero) ----
   greeting: "Hello, I'm"
-  subtitle: "Postdoctoral Researcher · Computational Biomedicine"
+  subtitle: "Postdoctoral Researcher @ Institute for Computational Biomedicine, RWTH Aachen"
   tagline: "I develop <strong>hybrid models</strong> that combine mechanistic and data-driven methods to make machine learning in healthcare more reliable, interpretable and clinically trustworthy."
 
   # ---- "About" facts (right of the biography) ----
