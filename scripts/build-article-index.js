@@ -39,6 +39,7 @@ function parseFrontmatter(content) {
 
 function getAllMarkdownFiles(dir) {
   let results = [];
+  if (!fs.existsSync(dir)) return results; // folder is absent when there are no articles
   const list = fs.readdirSync(dir, { withFileTypes: true });
 
   list.forEach((file) => {

@@ -1,128 +1,165 @@
-import { FaRegEnvelope, FaLocationDot } from "react-icons/fa6";
-import { toast } from "sonner";
+import { Link } from "react-router";
 
+import { Button } from "@/components/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { FaRegEnvelope } from "react-icons/fa6";
 
 import { profile } from "@/data/profile";
 
 export default function IntroductionSection() {
   return (
-    <div className="flex flex-col sm:flex-row items-center justify-center gap-8 md:gap-12 lg:gap-16">
-      <ProfileCard />
-      <Biography />
+    <div className="space-y-24">
+      <Hero />
+      <About />
     </div>
   );
 }
 
-function ProfileCard() {
+function Hero() {
   return (
-    <div className="flex flex-col items-center gap-y-4 shrink-0 w-full max-w-72 text-center">
-      <img
-        src={profile.profileImage}
-        alt="Profile"
-        className="w-60 h-60 rounded-lg object-cover"
-        loading="lazy"
-      />
-      <div className="flex flex-col items-center gap-y-2">
-        {profile.name && (
-          <p className="text-2xl font-semibold text-foreground">
+    <div
+      className="rounded-3xl px-4 sm:px-8 py-8"
+      style={{
+        background:
+          "radial-gradient(900px 380px at 85% -10%, color-mix(in srgb, var(--primary) 16%, transparent), transparent 70%)",
+      }}
+    >
+      <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-10 md:gap-12 items-center">
+        <div className="order-2 md:order-1 text-center md:text-left">
+          <p className="text-primary font-semibold tracking-wide mb-2">
+            {profile.greeting}
+          </p>
+          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight">
             {profile.name}
+          </h1>
+          <p className="text-lg sm:text-xl text-muted-foreground mt-5">
+            {profile.subtitle}
           </p>
-        )}
-        {profile.headline && (
-          <p className="text-base font-medium text-muted-foreground">
-            {profile.headline}
-          </p>
-        )}
-        {profile.email && <EmailCopy email={profile.email} />}
-        {profile.location && (
-          <p className="flex flex-row items-center gap-2 text-base font-medium text-muted-foreground">
-            <FaLocationDot className="w-4 h-4" />
-            {profile.location}
-          </p>
-        )}
-        <TooltipProvider delayDuration={100}>
-          <div className="flex flex-row flex-wrap justify-center gap-y-2 gap-x-4 py-2 text-foreground max-w-64">
-            {profile.links.map((item, index) => (
-              <a
-                key={index}
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="shrink-0"
-              >
-                <Tooltip>
-                  <TooltipTrigger>
-                    <item.icon
-                      className="w-8 h-8 cursor-pointer opacity-80 hover:opacity-100 transition-opacity duration-50"
-                      aria-label={item.name}
-                    />
-                  </TooltipTrigger>
-                  <TooltipContent side="bottom">
-                    <p>{item.name}</p>
-                  </TooltipContent>
-                </Tooltip>
+          <p
+            className="text-base sm:text-lg mt-4 max-w-xl mx-auto md:mx-0"
+            dangerouslySetInnerHTML={{ __html: profile.tagline }}
+          />
+
+          <div className="flex flex-wrap gap-3 mt-7 justify-center md:justify-start">
+            <Button asChild size="lg" className="rounded-full px-6">
+              <Link to="/publications">See publications</Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="rounded-full px-6 border-primary text-primary hover:text-primary"
+            >
+              <a href="/pdf/CV_Samadi.pdf" target="_blank" rel="noopener noreferrer">
+                Download CV
               </a>
-            ))}
+            </Button>
           </div>
-        </TooltipProvider>
+
+          <TooltipProvider delayDuration={100}>
+            <ul className="flex flex-wrap gap-2.5 mt-6 justify-center md:justify-start">
+              <li>
+                <SocialButton
+                  href={`mailto:${profile.email}`}
+                  label="Email"
+                  external={false}
+                >
+                  <FaRegEnvelope className="w-4.5 h-4.5" />
+                </SocialButton>
+              </li>
+              {profile.links
+                .filter((item) => !/CV/i.test(item.name))
+                .map((item) => (
+                  <li key={item.name}>
+                    <SocialButton href={item.url} label={item.name}>
+                      <item.icon className="w-4.5 h-4.5" />
+                    </SocialButton>
+                  </li>
+                ))}
+            </ul>
+          </TooltipProvider>
+        </div>
+
+        <div className="order-1 md:order-2 flex justify-center">
+          <img
+            src={profile.profileImage}
+            alt={`Portrait of ${profile.name}`}
+            className="w-64 h-64 sm:w-80 sm:h-80 rounded-full object-cover border-8 border-card shadow-xl ring-2 ring-primary"
+          />
+        </div>
       </div>
     </div>
   );
 }
 
-function Biography() {
+function SocialButton({
+  href,
+  label,
+  children,
+  external = true,
+}: {
+  href: string;
+  label: string;
+  children: React.ReactNode;
+  external?: boolean;
+}) {
   return (
-    <div className="min-w-64 max-w-prose w-full px-4 sm:px-0">
-      <div className="text-2xl font-semibold mb-2">About Me</div>
-      {profile.biography ? (
-        <div
-          className="prose dark:prose-invert text-left text-base/6"
-          dangerouslySetInnerHTML={{ __html: profile.biography }}
-          aria-label="User biography"
-        />
-      ) : (
-        <p className="text-gray-500 italic">No biography available.</p>
-      )}
-    </div>
+    <Tooltip>
+      <TooltipTrigger asChild>
+        <a
+          href={href}
+          aria-label={label}
+          {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+          className="grid place-items-center w-10 h-10 rounded-full bg-muted text-muted-foreground border transition-colors hover:bg-primary hover:text-primary-foreground hover:border-primary"
+        >
+          {children}
+        </a>
+      </TooltipTrigger>
+      <TooltipContent side="bottom">
+        <p>{label}</p>
+      </TooltipContent>
+    </Tooltip>
   );
 }
 
-function EmailCopy({ email }: { email: string }) {
-  const handleCopy = () => {
-    navigator.clipboard.writeText(email);
-    toast("📋 Email Address Copied!", {
-      // description: `${email} has been copied to your clipboard.`,
-      action: {
-        label: "📩 Send Email",
-        onClick: () => {
-          window.location.href = `mailto:${email}`;
-        },
-      },
-    });
-  };
-
+function About() {
   return (
-    <TooltipProvider delayDuration={100}>
-      <Tooltip>
-        <TooltipTrigger asChild>
-          <button
-            onClick={handleCopy}
-            className="flex flex-row items-center gap-2 text-base font-medium text-foreground cursor-pointer opacity-80 hover:opacity-100 focus:outline-none"
-          >
-            <FaRegEnvelope className="w-4 h-4" />
-            {email}
-          </button>
-        </TooltipTrigger>
-        <TooltipContent side="right">
-          <p>Click to copy</p>
-        </TooltipContent>
-      </Tooltip>
-    </TooltipProvider>
+    <section className="space-y-6">
+      <h2 className="text-3xl font-semibold relative pb-3 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-12 after:h-[3px] after:rounded after:bg-primary">
+        About
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-10">
+        <div
+          className="prose dark:prose-invert max-w-none text-base/7"
+          dangerouslySetInnerHTML={{ __html: profile.biography }}
+          aria-label="Biography"
+        />
+
+        <dl className="grid grid-cols-[6.5rem_1fr] gap-x-4 gap-y-3 text-[0.95rem] content-start">
+          {profile.facts.map((fact) => (
+            <div key={fact.label} className="contents">
+              <dt className="font-semibold text-primary">{fact.label}</dt>
+              <dd>{fact.value}</dd>
+            </div>
+          ))}
+          <dt className="font-semibold text-primary">Keywords</dt>
+          <dd className="flex flex-wrap gap-1.5">
+            {profile.keywords.map((keyword) => (
+              <span
+                key={keyword}
+                className="text-xs px-2.5 py-0.5 rounded-full bg-primary/10 text-primary"
+              >
+                {keyword}
+              </span>
+            ))}
+          </dd>
+        </dl>
+      </div>
+    </section>
   );
 }

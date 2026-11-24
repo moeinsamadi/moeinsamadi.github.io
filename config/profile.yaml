@@ -8,6 +8,23 @@
 profile:
   name: "Moein Einollahzadeh Samadi"
   headline: "Postdoctoral Researcher @ Institute for Computational Biomedicine, RWTH Aachen"
+
+  # ---- Top of the home page (hero) ----
+  greeting: "Hello, I'm"
+  subtitle: "Postdoctoral Researcher · Computational Biomedicine"
+  tagline: "I develop <strong>hybrid models</strong> that combine mechanistic and data-driven methods to make machine learning in healthcare more reliable, interpretable and clinically trustworthy."
+
+  # ---- "About" facts (right of the biography) ----
+  facts:
+    - label: "Position"
+      value: "Postdoctoral Researcher, since 2025"
+    - label: "Degree"
+      value: "Ph.D. (Dr. rer. nat.), RWTH Aachen"
+    - label: "Location"
+      value: "Aachen, Germany"
+    - label: "Languages"
+      value: "Persian (native) · English (C1) · German (B1)"
+  keywords: ["Hybrid modeling", "Neurosymbolic AI", "Interpretability", "Uncertainty quantification", "Clinical prediction", "ICU", "Digital twins", "Kolmogorov–Arnold networks", "Swarm learning", "Glucose–insulin modeling"]
   email: "moein.samadi@rwth-aachen.de"
   location: "Aachen, Germany"
   profileImage: "/images/profile.jpg"
@@ -57,6 +74,15 @@ profile:
     <div class="my-2"></div>
     I trained as a physicist (B.Sc. and M.Sc., Sharif University of Technology) before completing my Ph.D. in Computational Engineering Sciences at RWTH Aachen University in 2025.
     Feel free to <a href="mailto:moein.samadi@rwth-aachen.de" target="_blank" rel="noopener noreferrer">reach out</a> about collaborations.
+
+# =====================================================
+# Contact section at the bottom of the home page
+# =====================================================
+
+contact:
+  title: "Let's get in contact!"
+  text: "I'm always happy to talk about hybrid modeling, clinical machine learning, or possible collaborations."
+  address: "Institute for Computational Biomedicine<br/>University Hospital RWTH Aachen, Germany"
 
 # =====================================================
 # Education

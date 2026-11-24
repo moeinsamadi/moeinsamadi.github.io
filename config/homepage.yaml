@@ -33,3 +33,7 @@ homepage:
     - name: Services
       variant: default # default | card
       enabled: true
+
+    - name: Contact
+      variant: default
+      enabled: true
