@@ -21,7 +21,7 @@ profile:
     - label: "Degree"
       value: "Ph.D. (Dr. rer. nat.), RWTH Aachen"
     - label: "Languages"
-      value: "Persian (native) · English (C1) · German (B2)"
+      value: "English (C1) · German (B2) · Persian (native)"
   keywords: ["Hybrid modeling", "Interpretability", "Uncertainty quantification", "Clinical prediction", "ICU", "Digital twins", "Kolmogorov–Arnold networks", "Swarm learning", "Glucose–insulin modeling", "Neurosymbolic AI"]
   email: "moein.samadi@rwth-aachen.de"
   profileImage: "/images/profile.jpg"
@@ -346,10 +346,6 @@ skills:
       description: "NOISECUT, a Python package for noise-tolerant classification of binary data."
 
   Languages:
-    - name: "Persian"
-      logo: null
-      proficiency: "Native"
-      description: null
     - name: "English"
       logo: null
       proficiency: "C1 – advanced (professional working proficiency)"
@@ -357,4 +353,8 @@ skills:
     - name: "German"
       logo: null
       proficiency: "B2 – upper-intermediate"
+      description: null
+    - name: "Persian"
+      logo: null
+      proficiency: "Native"
       description: null
