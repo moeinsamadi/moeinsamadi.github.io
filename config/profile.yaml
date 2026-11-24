@@ -1,0 +1,340 @@
+# =====================================================
+# Data shown on the Home (About Me) page.
+#
+# Images / files: use a full URL, or a local file under /public
+# referenced with a leading "/" (e.g. "/images/profile.jpg").
+# =====================================================
+
+profile:
+  name: "Moein Einollahzadeh Samadi"
+  headline: "Postdoctoral Researcher @ Institute for Computational Biomedicine, RWTH Aachen"
+  email: "moein.samadi@rwth-aachen.de"
+  location: "Aachen, Germany"
+  profileImage: "/images/profile.jpg"
+
+  links:
+    - name: "Google Scholar"
+      url: "https://scholar.google.com/citations?user=w5OXQMsAAAAJ&hl=en"
+      icon:
+        name: "FaGoogleScholar"
+        package: "react-icons/fa6"
+
+    - name: "ORCID"
+      url: "https://orcid.org/0000-0002-3916-1085"
+      icon:
+        name: "FaOrcid"
+        package: "react-icons/fa6"
+
+    - name: "LinkedIn"
+      url: "https://www.linkedin.com/in/moein-e-samadi-297b59256/"
+      icon:
+        name: "FaLinkedin"
+        package: "react-icons/fa6"
+
+    - name: "GitHub"
+      url: "https://github.com/moeinsamadi"
+      icon:
+        name: "FaGithub"
+        package: "react-icons/fa6"
+
+    - name: "Institute page"
+      url: "https://www.ukaachen.de/kliniken-institute/joint-research-center-for-computational-biomedicine/lehre/institute-for-computational-biomedicine/"
+      icon:
+        name: "FaBuildingColumns"
+        package: "react-icons/fa6"
+
+    - name: "CV (PDF)"
+      url: "/pdf/CV_Samadi.pdf"
+      icon:
+        name: "FaRegIdBadge"
+        package: "react-icons/fa6"
+
+  # HTML is allowed here (<br/>, <a>, <strong>, ...)
+  biography: |
+    Hi! I'm <strong>Moein</strong>, a postdoctoral researcher at the <em>Institute for Computational Biomedicine</em> (University Hospital RWTH Aachen), working with Prof. Andreas Schuppert.
+    My research is on <strong>hybrid modeling</strong>: the principled integration of mechanistic and data-driven methods to make machine learning in healthcare more reliable, interpretable and clinically trustworthy.
+    I work on ICU mortality prediction across multiple hospitals, non-invasive ventilation outcome prediction, and glucose–insulin dynamics in diabetes, combining methodological contributions with validated clinical applications.
+    <div class="my-2"></div>
+    I trained as a physicist (B.Sc. and M.Sc., Sharif University of Technology) before completing my Ph.D. in Computational Engineering Sciences at RWTH Aachen University in 2025.
+    Feel free to <a href="mailto:moein.samadi@rwth-aachen.de" target="_blank" rel="noopener noreferrer">reach out</a> about collaborations.
+
+# =====================================================
+# Education
+# `logo` is optional (a URL or a file under /public/images/).
+# =====================================================
+
+education:
+  - degree: "Ph.D. in Computational Engineering Sciences"
+    school: "RWTH Aachen University"
+    years: "2019 – 2025"
+
+  - degree: "M.Sc. in Condensed Matter Physics"
+    school: "Sharif University of Technology"
+    years: "2016 – 2018"
+
+  - degree: "B.Sc. in Physics"
+    school: "Sharif University of Technology"
+    years: "2010 – 2015"
+
+# =====================================================
+# Research positions
+# =====================================================
+
+workExperience:
+  - title: "Postdoctoral Researcher"
+    company: "Institute for Computational Biomedicine, University Hospital RWTH Aachen"
+    years: "2025 – Present"
+
+  - title: "Associated Doctoral Researcher"
+    company: "Helmholtz School for Data Science in Life, Earth, and Energy (HDS-LEE)"
+    years: "2019 – 2025"
+
+# =====================================================
+# Talks and posters
+# =====================================================
+
+talks:
+  - category: "Invited talk"
+    title: "Integrating Knowledge into Learning from Data"
+    organization: "Biomedical & Biotechnology Research Cluster Seminar, University of Warwick, Coventry, UK"
+    date: "Apr 2026"
+    link: null
+    image: null
+
+  - category: "Contributed talk"
+    title: "NoiseCut: Noise-Tolerant Classification using Maximum Cut"
+    organization: "HOOC Conference 2025, RWTH Aachen University"
+    date: "Aug 2025"
+    link: null
+    image: null
+
+  - category: "Contributed talk"
+    title: "Interpretable and generalizable mortality prediction in critical care: integrating mechanistic knowledge with machine learning"
+    organization: "VPH Conference 2024, University of Stuttgart"
+    date: "Oct 2024"
+    link: null
+    image: null
+
+  - category: "Contributed talk"
+    title: "Interpretable machine learning for ICU mortality prediction (flash talk and poster)"
+    organization: "Change-the-Universe Symposium 2024, University Hospital RWTH Aachen"
+    date: "Sep 2024"
+    link: null
+    image: null
+
+  - category: "Contributed talk"
+    title: "Integrating knowledge and machine learning for classification using binary data: a case study on mortality prediction of mechanically ventilated COVID-19 patients"
+    organization: "CompBioMed Conference 2023, Science Congress Center Munich, Garching"
+    date: "Sep 2023"
+    link: null
+    image: null
+
+  - category: "Contributed talk"
+    title: "Graph-theoretic formulation of hybrid models and its application in medicine (flash talk and poster)"
+    organization: "ByteMAL 2023, Aachen"
+    date: "May 2023"
+    link: null
+    image: null
+
+  - category: "Contributed talk"
+    title: "Graph-theoretic formulation of hybrid models and its application in medicine"
+    organization: "Bonn Conference for Mathematical Life Sciences, Bonn"
+    date: "Apr 2023"
+    link: null
+    image: null
+
+  - category: "Contributed talk"
+    title: "A training strategy for hybrid models to break the curse of dimensionality: an application to COVID-19 data (flash talk and poster)"
+    organization: "4th Machine Learning and AI in Bio(Chemical) Engineering, University of Cambridge, UK"
+    date: "Jul 2021"
+    link: null
+    image: null
+
+  - category: "Poster"
+    title: "Applications of large language models in biomedicine"
+    organization: "CCLS 1st Anniversary, RWTH Aachen University"
+    date: "Oct 2024"
+    link: null
+    image: null
+
+  - category: "Poster"
+    title: "Uncertainty quantification of hybrid models in life sciences"
+    organization: "CCLS Opening Symposium, RWTH Aachen University"
+    date: "Oct 2023"
+    link: null
+    image: null
+
+  - category: "Poster"
+    title: "Graph-theoretic formulation of hybrid models and its application in medicine"
+    organization: "Workshop on Learning and Inference from Structured Data (ICTP), Trieste, Italy"
+    date: "Jul 2023"
+    link: null
+    image: null
+
+  - category: "Poster"
+    title: "Structured hybrid modeling and its application in mortality estimation for COVID-19 patients"
+    organization: "21st International Conference on Systems Biology (ICSB 2022), Berlin"
+    date: "Oct 2022"
+    link: null
+    image: null
+
+  - category: "Poster"
+    title: "Mechanisms of disease progression in critically ill COVID-19 patients during ICU stay"
+    organization: "Third International Summer Institute on Network Physiology (ISINP), Lake Como School of Advanced Studies, Italy"
+    date: "Jul 2022"
+    link: null
+    image: null
+
+# =====================================================
+# Teaching, mentoring, review and organizing
+# =====================================================
+
+services:
+  - category: "Teaching"
+    role: "Co-instructor: MATLAB and Applied Health Informatics"
+    organization: "RWTH Aachen University (with Prof. Andreas Schuppert)"
+    date: "2025 – 2026"
+    link: null
+    image: null
+
+  - category: "Teaching"
+    role: "Teaching Assistant: MATLAB and Systems Biology"
+    organization: "RWTH Aachen University (Prof. Andreas Schuppert)"
+    date: "2021 – 2024"
+    link: null
+    image: null
+
+  - category: "Teaching"
+    role: "Teaching Assistant: Solid State Physics I & II"
+    organization: "Sharif University of Technology"
+    date: "2014 – 2016"
+    link: null
+    image: null
+
+  - category: "Mentoring"
+    role: "Supervision of project and internship students"
+    organization: "Simulation Sciences and Biomedical Engineering, RWTH Aachen"
+    date: "2022 – 2025"
+    link: null
+    image: null
+
+  - category: "Peer review"
+    role: "Reviewer"
+    organization: "Nature Communications, npj Digital Medicine, Scientific Reports, BMC Medical Informatics and Decision Making, Cluster Computing, Journal of Medical Systems, Discover Computing, Big Data, Health Care Management Science"
+    date: null
+    link: null
+    image: null
+
+  - category: "Organizing"
+    role: "Organizer: ByteMAL 2023"
+    organization: "Bioinformatics and systems biomedicine conference for young international researchers, Aachen"
+    date: "2023"
+    link: "http://bytemal.eu/"
+    image: null
+
+# =====================================================
+# Skills (logo / proficiency / description are optional)
+# =====================================================
+
+skills:
+  Programming & tools:
+    - name: "Python"
+      logo: null
+      proficiency: "NumPy, SciPy, pandas, scikit-learn"
+      description: null
+    - name: "PyTorch"
+      logo: null
+      proficiency: null
+      description: null
+    - name: "TensorFlow / Keras"
+      logo: null
+      proficiency: null
+      description: null
+    - name: "MATLAB"
+      logo: null
+      proficiency: null
+      description: null
+    - name: "SQL"
+      logo: null
+      proficiency: null
+      description: null
+    - name: "Git, Linux & HPC clusters"
+      logo: null
+      proficiency: null
+      description: null
+
+  ML & modeling:
+    - name: "Hybrid mechanistic / data-driven modeling"
+      logo: null
+      proficiency: null
+      description: null
+    - name: "Neurosymbolic AI"
+      logo: null
+      proficiency: null
+      description: null
+    - name: "Interpretability & explainability"
+      logo: null
+      proficiency: null
+      description: null
+    - name: "Uncertainty quantification"
+      logo: null
+      proficiency: null
+      description: null
+    - name: "Time-series modeling & digital twins"
+      logo: null
+      proficiency: null
+      description: null
+    - name: "Kolmogorov–Arnold networks"
+      logo: null
+      proficiency: null
+      description: null
+    - name: "Swarm / federated learning"
+      logo: null
+      proficiency: null
+      description: null
+
+  Biomedical domain:
+    - name: "ICU & critical-care prognostic modeling"
+      logo: null
+      proficiency: null
+      description: null
+    - name: "EHR & multi-hospital dataset analysis"
+      logo: null
+      proficiency: null
+      description: "Including clinical bias and dataset-shift assessment."
+    - name: "Non-invasive ventilation outcome prediction"
+      logo: null
+      proficiency: null
+      description: null
+    - name: "Glucose–insulin modeling (T1D & T2D)"
+      logo: null
+      proficiency: null
+      description: null
+
+  Research & software:
+    - name: "Scientific computing & algorithm design"
+      logo: null
+      proficiency: null
+      description: null
+    - name: "Reproducible ML pipelines & MLOps"
+      logo: null
+      proficiency: null
+      description: null
+    - name: "Open-source package development"
+      logo: null
+      proficiency: null
+      description: "NOISECUT, a Python package for noise-tolerant classification of binary data."
+
+  Languages:
+    - name: "Persian"
+      logo: null
+      proficiency: "Native"
+      description: null
+    - name: "English"
+      logo: null
+      proficiency: "C1 – advanced (professional working proficiency)"
+      description: null
+    - name: "German"
+      logo: null
+      proficiency: "B1 – intermediate"
+      description: null

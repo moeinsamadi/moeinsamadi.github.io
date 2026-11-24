@@ -1,0 +1,9 @@
+# =====================================================
+# Website Configuration
+# =====================================================
+
+site:
+  name: "Moein E. Samadi"
+  repoUrl: "https://github.com/moeinsamadi/moeinsamadi.github.io"
+  description: "Moein Einollahzadeh Samadi, postdoctoral researcher at the Institute for Computational Biomedicine, RWTH Aachen. Hybrid modeling, interpretable machine learning and clinical prediction."
+  author: "Moein E. Samadi"

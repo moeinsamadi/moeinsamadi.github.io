@@ -1,0 +1,165 @@
+# =====================================================
+# PROJECTS
+#
+# Each project has its own page (#/projects/<id>) with an overview,
+# materials (papers, slides, posters ...) and related publications.
+#
+# --- How to add a paper / presentation to a project ---------------
+# Upload the file into the project's folder on GitHub:
+#
+#     public/projects/<id>/paper.pdf
+#     public/projects/<id>/slides.pdf      (or .pptx)
+#     public/projects/<id>/poster.pdf
+#     public/projects/<id>/cover.png       (card figure; replaces cover.svg)
+#
+# It is picked up automatically on the next build (a minute after you
+# commit). File names starting with "paper", "slides", "poster", "supplement"
+# get the matching label; any other file is listed under its own name.
+# PDFs are shown in an embedded viewer; other files are offered as downloads.
+#
+# --- Fields --------------------------------------------------------
+# id            folder name and URL of the project (letters, digits, dashes)
+# title         project name
+# summary       1-2 sentences shown on the cards
+# category      small label above the title
+# hue           0-360, accent colour of the card when no figure is used
+# icon          react-icons name (https://react-icons.github.io/react-icons/)
+# tags          shown as chips; used for filtering on the Projects page
+# featured      true -> shown on the home page
+# publications  ids from publications.yaml
+# links         extra external links (type: paper|preprint|slides|poster|code|data|video|link)
+# description   Markdown shown on the project page
+# image         optional: URL of a figure (otherwise cover.* in the folder is used)
+# =====================================================
+
+projects:
+  items:
+    - id: hybrid-modeling
+      title: "Hybrid Modeling & Neurosymbolic AI"
+      summary: "Principled ways to combine mechanistic knowledge with machine learning: training strategies, graph-theoretic formulations, uncertainty quantification and the link to neurosymbolic AI."
+      category: "Methods"
+      hue: 262
+      icon:
+        name: LuNetwork
+        package: "react-icons/lu"
+      tags: ["Hybrid modeling", "Neurosymbolic AI", "Uncertainty quantification", "Graph theory"]
+      featured: true
+      publications: [neurosymbolic-pmlr-2026, plos-one-2022]
+      links: []
+      description: |
+        Mechanistic models need detailed understanding of a system, while purely data-driven models need a lot of data and are only reliable inside the convex hull of their training data. **Hybrid models** embed prior knowledge about the structure of a system into the learning process to get the best of both.
+
+        My work in this area includes:
+
+        - A **training strategy for tree-structured hybrid models** on binary data. It uses graph-theoretic methods to find small sets of data points whose labels allow extrapolation to the entire valid input space (PLOS ONE, 2022).
+        - A **graph-theoretic formulation of hybrid models**, presented at the Bonn Conference for Mathematical Life Sciences, ByteMAL 2023 and the ICTP workshop on Learning and Inference from Structured Data.
+        - **Uncertainty quantification of binary hybrid models**, the topic of my doctoral dissertation at RWTH Aachen (2025).
+        - A perspective that places hybrid modeling within **neurosymbolic AI**, submitted to the 20th Conference on Neurosymbolic Learning and Reasoning (PMLR 284).
+
+    - id: icu-mortality
+      title: "Interpretable ICU Mortality Prediction"
+      summary: "Hybrid mechanistic/data-driven models that predict ICU mortality, stay interpretable to clinicians and generalize across hospitals, including GPT-4o-assisted knowledge integration."
+      category: "Critical care"
+      hue: 210
+      icon:
+        name: LuHeartPulse
+        package: "react-icons/lu"
+      tags: ["ICU", "Interpretability", "Generalization", "Hybrid modeling", "LLMs"]
+      featured: true
+      publications: [icu-sci-rep-2024, gpt4o-icu-2025, convex-hull-2022]
+      links: []
+      description: |
+        Machine-learning models for the ICU have to be transparent to clinical interpretation and must keep their predictive power on data from hospitals they were not trained on.
+
+        - **A hybrid modeling framework** integrates clinical knowledge with machine learning on ICD codes. A tree-structured network of modules with clinical meaning keeps the model interpretable, and it is validated on external datasets from other hospitals (Scientific Reports, 2024).
+        - **GPT-4o for knowledge integration:** GPT-4o generates medical descriptions of the input features. These are clustered, reviewed by a physician and turned into weak classifiers that are combined by boosting. The study covers 16,018 mechanically ventilated ICU patients (BMC Medical Informatics and Decision Making, 2025).
+        - **Dataset heterogeneity:** I contributed to a convex-hull analysis of how patient populations from different hospitals differ and what this means for hospital bias in downstream machine learning (Frontiers in Big Data, 2022).
+
+        Talks and posters on this work: VPH 2024, Change-the-Universe Symposium 2024, CompBioMed 2023, ICSB 2022 and ISINP 2022.
+
+    - id: nivpredict
+      title: "NIVPredict: Early Prediction of Ventilation Outcome"
+      summary: "An AI tool that predicts early whether non-invasive ventilation will succeed in acute respiratory failure, validated across centres and tested in a hospital setting."
+      category: "Critical care"
+      hue: 175
+      icon:
+        name: LuWind
+        package: "react-icons/lu"
+      tags: ["ICU", "Clinical prediction", "TabPFN", "Validation"]
+      featured: true
+      publications: [nivpredict-icm-2025, nivpredict-critical-care-2026]
+      links:
+        - label: "Critical Care (2026)"
+          url: "https://doi.org/10.1186/s13054-026-05894-1"
+          type: paper
+        - label: "Intensive Care Medicine (2025)"
+          url: "https://doi.org/10.1007/s00134-025-08025-6"
+          type: paper
+      description: |
+        Patients with acute respiratory failure who fail non-invasive ventilation (NIV) and then need intubation have a higher risk of death, and identifying them early is difficult. NIVPredict is an AI tool for predicting the outcome of NIV soon after treatment starts.
+
+        - **Model:** built on TabPFN, a tabular prior-data fitted network that is pre-trained on synthetic tasks and predicts through in-context learning.
+        - **Evidence:** a multi-centre validation study (Intensive Care Medicine, 2025), followed by in-hospital testing of the tool with clinicians (Critical Care, 2026).
+        - **Collaboration:** joint work with the University of Warwick and clinical partners. I presented the broader line of work as an invited talk at the University of Warwick (April 2026).
+
+    - id: glucose-insulin
+      title: "Glucose–Insulin Dynamics in Diabetes"
+      summary: "Individualized glucose forecasting and risk prediction in type 1 and type 2 diabetes, using continuous glucose monitoring, mechanistic models and multimodal LLMs."
+      category: "Diabetes"
+      hue: 28
+      icon:
+        name: LuDroplets
+        package: "react-icons/lu"
+      tags: ["Diabetes", "Time series", "LLMs", "Mechanistic modeling"]
+      featured: false
+      publications: [glucose-llm-2025, bradycardia-2024]
+      links: []
+      description: |
+        - **Glucose forecasting in type 1 diabetes** by combining multimodal large language models with mechanistic modeling (Journal of Biomedical Informatics, 2025).
+        - **Glucose and bradycardia in type 2 diabetes with chronic kidney disease:** a pilot study that related individualized relative glucose levels to bradycardia episodes found by simultaneous interstitial glucose and ECG monitoring (Scientific Reports, 2024; equal first-author contribution).
+
+    - id: noisecut
+      title: "NOISECUT: Noise-Tolerant Classification"
+      summary: "An open-source Python package for classifying binary data with noisy labels, combining prior knowledge about the input features with max-cut solutions."
+      category: "Software"
+      hue: 145
+      icon:
+        name: LuScissors
+        package: "react-icons/lu"
+      tags: ["Open source", "Python", "Binary data", "Max-cut"]
+      featured: false
+      publications: [noisecut-2024]
+      links:
+        - label: "PyPI package"
+          url: "https://pypi.org/project/noisecut/"
+          type: code
+      description: |
+        Binary data is common in clinical applications, for example when patients are described by ICD codes. Predictions on such data are always extrapolation, and noisy labels make overfitting a serious risk.
+
+        NOISECUT implements tree-structured functional networks, a kind of modular neural network in which each input feature feeds exactly one module. Its noise tolerance comes from a dropout strategy that uses prior knowledge of the input features, and from solving max-cut problems during learning. On synthetic binary data it prevented overfitting better than early stopping (BMC Bioinformatics, 2024).
+
+        Install it with `pip install noisecut`.
+
+    - id: kan-swarm
+      title: "Structured & Swarm Learning"
+      summary: "Kolmogorov–Arnold networks that represent structural knowledge, and swarm learning as a flexible alternative to foundation models for essential tasks."
+      category: "Methods"
+      hue: 320
+      icon:
+        name: LuBrainCircuit
+        package: "react-icons/lu"
+      tags: ["Kolmogorov–Arnold networks", "Swarm learning", "Preprint"]
+      featured: false
+      publications: [kan-arxiv-2024, swarm-learning-arxiv-2025]
+      links:
+        - label: "arXiv:2405.11318"
+          url: "https://arxiv.org/abs/2405.11318"
+          type: preprint
+        - label: "arXiv:2510.06349"
+          url: "https://arxiv.org/abs/2510.06349"
+          type: preprint
+      description: |
+        Two preprints on how to build knowledge about structure into learning systems:
+
+        - **Smooth Kolmogorov–Arnold networks** for representing structural knowledge (arXiv, 2024).
+        - **Swarm learning** as a flexible approach that may outpace foundation models in essential tasks (arXiv, 2025).

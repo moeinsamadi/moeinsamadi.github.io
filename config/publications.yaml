@@ -1,0 +1,108 @@
+# =====================================================
+# Publications
+#
+# `authorName` is highlighted in every author list (a trailing * is ignored).
+# `id` is optional; projects reference publications by id (see projects.yaml).
+# `link` is optional (DOI, arXiv, PDF in /public/pdf/ ...).
+# `featured: true` shows the paper on the home page.
+# =====================================================
+
+publications:
+  authorName: "Moein E. Samadi"
+
+  items:
+    - id: neurosymbolic-pmlr-2026
+      title: "From Hybrid Mechanistic–Data-Driven Modeling to Neurosymbolic AI: What, Why, and How?"
+      authors: "Moein E. Samadi, Andreas Schuppert"
+      year: 2026
+      venue: "Submitted to Proceedings of Machine Learning Research 284:1–19 (20th Conference on Neurosymbolic Learning and Reasoning)"
+      link: null
+      featured: true
+
+    - id: nivpredict-critical-care-2026
+      title: "In-hospital testing of NIVPredict: an AI tool for early prediction of non-invasive ventilation outcome in acute respiratory failure"
+      authors: "Hang Yu, Sina Saffaran, Moein E. Samadi, Andreas Schuppert, Declan Bates, et al."
+      year: 2026
+      venue: "Critical Care"
+      link: "https://doi.org/10.1186/s13054-026-05894-1"
+      featured: true
+
+    - id: glucose-llm-2025
+      title: "Multimodal large language models and mechanistic modeling for glucose forecasting in type 1 diabetes patients"
+      authors: "Jonas Wolber, Moein E. Samadi, Julia Sellin, Andreas Schuppert, et al."
+      year: 2025
+      venue: "Journal of Biomedical Informatics 172:104945"
+      link: null
+      featured: false
+
+    - id: gpt4o-icu-2025
+      title: "GPT-4o and the quest for machine learning interpretability in ICU risk-of-death prediction"
+      authors: "Moein E. Samadi, Kateryna Nikulina, Sebastian Johannes Fritsch, Andreas Schuppert"
+      year: 2025
+      venue: "BMC Medical Informatics and Decision Making 25(1):373"
+      link: "https://doi.org/10.1186/s12911-025-03224-z"
+      featured: true
+
+    - id: nivpredict-icm-2025
+      title: "Early prediction of non-invasive ventilation outcome using the TabPFN machine-learning model: a multi-centre validation study"
+      authors: "Hang Yu, Sina Saffaran, Moein E. Samadi, Andreas Schuppert, Declan Bates, et al."
+      year: 2025
+      venue: "Intensive Care Medicine (published online 10 July 2025)"
+      link: "https://doi.org/10.1007/s00134-025-08025-6"
+      featured: false
+
+    - id: swarm-learning-arxiv-2025
+      title: "Flexible swarm learning may outpace foundation models in essential tasks"
+      authors: "Moein E. Samadi, Andreas Schuppert"
+      year: 2025
+      venue: "arXiv preprint arXiv:2510.06349"
+      link: "https://arxiv.org/abs/2510.06349"
+      featured: false
+
+    - id: bradycardia-2024
+      title: "Monitoring individualized glucose levels predicts risk for bradycardia in type 2 diabetes patients with chronic kidney disease: a pilot study"
+      authors: "Pejman Farhadi Ghalati*, Moein E. Samadi*, Andreas Schuppert, et al."
+      year: 2024
+      venue: "Scientific Reports 14(1) (* equal contribution)"
+      link: "https://doi.org/10.1038/s41598-024-81983-x"
+      featured: false
+
+    - id: noisecut-2024
+      title: "NOISECUT: a Python package for noise-tolerant classification of binary data using max-cut solutions"
+      authors: "Moein E. Samadi, Hedieh Mirzaieazar, Alexander Mitsos, Andreas Schuppert"
+      year: 2024
+      venue: "BMC Bioinformatics 25(1):155"
+      link: "https://doi.org/10.1186/s12859-024-05769-8"
+      featured: true
+
+    - id: icu-sci-rep-2024
+      title: "A hybrid modeling framework for generalizable and interpretable predictions of ICU mortality across multiple hospitals"
+      authors: "Moein E. Samadi, Jorge Guzman-Maldonado, Kateryna Nikulina, Hedieh Mirzaieazar, Konstantin Sharafutdinov, Sebastian Johannes Fritsch, Andreas Schuppert"
+      year: 2024
+      venue: "Scientific Reports 14(1):5725"
+      link: "https://doi.org/10.1038/s41598-024-55577-6"
+      featured: true
+
+    - id: kan-arxiv-2024
+      title: "Smooth Kolmogorov–Arnold networks enabling structural knowledge representation"
+      authors: "Moein E. Samadi, Younes Müller, Andreas Schuppert"
+      year: 2024
+      venue: "arXiv preprint arXiv:2405.11318"
+      link: "https://arxiv.org/abs/2405.11318"
+      featured: false
+
+    - id: convex-hull-2022
+      title: "Application of convex-hull analysis for the evaluation of data heterogeneity between patient populations of different origins and implications of hospital bias in downstream machine-learning-based data processing: a comparison of four critical-care patient datasets"
+      authors: "Konstantin Sharafutdinov, J. S. Bhat, Sebastian Johannes Fritsch, K. Nikulina, Moein E. Samadi, R. Polzin, H. Mayer, G. Marx, J. Bickenbach, A. Schuppert"
+      year: 2022
+      venue: "Frontiers in Big Data 5"
+      link: "https://doi.org/10.3389/fdata.2022.603429"
+      featured: false
+
+    - id: plos-one-2022
+      title: "A training strategy for hybrid models to break the curse of dimensionality"
+      authors: "Moein E. Samadi, Sandra Kiefer, Sebastian Fritsch, Johannes Bickenbach, Andreas Schuppert"
+      year: 2022
+      venue: "PLOS ONE 17(9):e0274569"
+      link: "https://doi.org/10.1371/journal.pone.0274569"
+      featured: false
