@@ -348,11 +348,11 @@ skills:
   Languages:
     - name: "English"
       logo: null
-      proficiency: "C1 – advanced (professional working proficiency)"
+      proficiency: "C1 – advanced (Full professional proficiency)"
       description: null
     - name: "German"
       logo: null
-      proficiency: "B2 – upper-intermediate"
+      proficiency: "B2 – upper-intermediate (Professional working proficiency)"
       description: null
     - name: "Persian"
       logo: null
