@@ -103,11 +103,9 @@ education:
 workExperience:
   - title: "Postdoctoral Researcher"
     company: "Institute for Computational Biomedicine, University Hospital RWTH Aachen"
-    years: "2025 – Present"
 
   - title: "Associated Doctoral Researcher"
     company: "Helmholtz School for Data Science in Life, Earth, and Energy (HDS-LEE)"
-    years: "2020 – 2025"
 
 # =====================================================
 # Talks and posters
